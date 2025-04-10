@@ -28,7 +28,7 @@ body{
 
 .grid-container{
     display : grid;
-    grid-template-columns :250px 100px 150px ;
+    grid-template-columns :200px 150px 150px ;
     column-gap: 10px;
     row-gap : 10px;
     margin-top : 10px;
@@ -73,7 +73,17 @@ body{
     color : white;
     border : 2px solid white;
     border-radius : 5px;
-    padding : 17px 5px;
+    padding : 15px 5px;
+
+
+}
+#hehe2{
+    color : white;
+    border : 2px solid white;
+    border-radius : 5px;
+    padding : 15px 5px;
+    
+
 }
 input {
   background-color: black;  /* ya koi light color */
@@ -82,36 +92,8 @@ input {
 
 
 
-.bubbles {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-}
 
-.bubble {
-  position: absolute;
-  bottom: -100px;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  animation: rise 10s infinite ease-in;
-}
 
-@keyframes rise {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-1000px) scale(0.5);
-    opacity: 0;
-  }
-}
 
 
 
@@ -119,17 +101,7 @@ input {
     </style>
 </head>
 <body>
-    <div class="bubbles">
-        <div class="bubble" style="left: 10%; animation-duration: 12s;"></div>
-        <div class="bubble" style="left: 20%; animation-duration: 10s;"></div>
-        <div class="bubble" style="left: 30%; animation-duration: 14s;"></div>
-        <div class="bubble" style="left: 40%; animation-duration: 11s;"></div>
-        <div class="bubble" style="left: 50%; animation-duration: 13s;"></div>
-        <div class="bubble" style="left: 60%; animation-duration: 9s;"></div>
-        <div class="bubble" style="left: 70%; animation-duration: 15s;"></div>
-        <div class="bubble" style="left: 80%; animation-duration: 12s;"></div>
-        </div>
-      
+   
     <h1 id="main-heading">To do List </h1>
     <div class="main">
 <div class="grid-container">
@@ -192,7 +164,7 @@ function displayItems(){
  */
         let {item , dueDate} = todoList[i];
         newHtml += `<span id="hehe">${item}</span>
-            <span id="hehe">${dueDate}</span>
+            <span id="hehe2">${dueDate}</span>
             <button  class='btn-delete' onclick='todoList.splice(${i}, 1); displayItems(); saveToLocalStorage();'>Delete</button>
             
             `;
